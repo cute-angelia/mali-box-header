@@ -1,0 +1,120 @@
+/**
+ * inject.css
+ *
+ * @author: Cyw
+ * @email: rose1988.c@gmail.com
+ * @created: 2015/9/1 18:50
+ * @logs:
+ *
+ */
+
+/* 超链接特效 */
+/* Text scale */
+.link-braces a {
+    padding: 0 0.25em;
+    font-weight: 500;
+    text-decoration: underline;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.link-braces a:hover {
+    color: #d04c3f;
+}
+
+.link-braces a::before,
+.link-braces a::after {
+    position: absolute;
+    top: 0;
+    font-weight: 100;
+    font-size: 150%;
+    line-height: 1;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.link-braces a::before {
+    left: -0.1em;
+    content: '[';
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+
+.link-braces a::after {
+    right: -0.1em;
+    content: ']';
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+}
+
+.link-braces a:hover::before,
+.link-braces a:hover::after {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+/* 超链接特效 */
+
+/* 帖子高亮 */
+.hightLightToday {
+    color: #f60;
+}
+.hightLightTodayBot {
+    border-bottom:1px dotted #f60;
+}
+.hightLightNearest {
+    color: #5CACEE;
+}
+.hightLightNearestBot {
+    border-bottom:1px dotted #5CACEE;
+}
+.hightLightReply {
+    color: #cc0000;
+}
+.hightLightReplyBot {
+    border-bottom:1px dotted #cc0000;
+}
+/* 帖子高亮 END */
+
+
+.tips_container {
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    color: green;
+    opacity: 0.4;
+    background: #fff;
+    padding: 10px;
+    z-index: 99999
+}
+
+.tips_container:hover {
+    opacity: 0.9
+}
+
+.tips_container .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: red;
+    cursor: pointer
+}
+
+.tips_container select, .tips_container select option {
+    max-width: 18em
+}
+
+input.input-w80 {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #B2CCCC;
+    height: 18px;
+    line-height: 18px;
+    margin: 2px;
+    padding: 0 3px;
+    width: 40px;
+}
+
+.hidden1024 {
+    height: 36px; overflow: hidden;
+}

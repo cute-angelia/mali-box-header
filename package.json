@@ -1,0 +1,58 @@
+{
+  "name": "boxheader",
+  "sideEffects": false,
+  "description": "good boy",
+  "version": "1.0.0",
+  "author": "Vanilla <rose20.99.c@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "vue",
+    "mali-box-header"
+  ],
+  "main": "lib/mali-box-header",
+  "files": [
+    "lib/mali-box-header.js",
+    "package.json",
+    "README.md"
+  ],
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --env --open --hot",
+    "build": "cross-env NODE_ENV=production webpack --env --progress --hide-modules",
+    "lib": "cross-env NODE_ENV=production webpack --env.lib --progress --hide-modules"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "element-ui": "^2.13.0",
+    "js-cookie": "^2.2.1",
+    "mali-secure": "^1.0.7",
+    "nprogress": "^0.2.0",
+    "parseuri": "0.0.6",
+    "rechyons": "^0.8.5",
+    "svg-inline-loader": "^0.8.2",
+    "uikit": "^3.3.7",
+    "vue": "^2.5.11",
+    "vue-letter-avatar": "^0.1.6",
+    "vue-loader-plugin": "^1.3.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "cross-env": "^5.2.1",
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "style-loader": "^1.1.3",
+    "vue-loader": "^15.9.1",
+    "vue-template-compiler": "^2.4.4",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.4"
+  }
+}
