@@ -1,33 +1,36 @@
 var path = require('path')
 var webpack = require('webpack')
-const { VueLoaderPlugin } = require('vue-loader')
+const {
+  VueLoaderPlugin
+} = require('vue-loader')
 
 module.exports = env => {
   return {
     entry: env.lib ? "./packages/index.js" : "./examples/main.js",
     module: {
       rules: [{
-        test: /\.vue$/,
-        use: 'vue-loader'
-      }, {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-      },
-      {
-        test: /\.(eot|svg|ttf|woff|woff2)$/,
-        loader: 'file-loader'
-      },
-      {
-        test: /\.svg$/,
-        loader: 'svg-inline-loader'
-      },
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader'
+          test: /\.vue$/,
+          use: 'vue-loader'
+        }, {
+          test: /\.css$/,
+          use: ['vue-style-loader', 'style-loader', 'css-loader'],
+        },
+        {
+          test: /\.(eot|svg|ttf|woff|woff2)$/,
+          loader: 'file-loader'
+        },
+        {
+          test: /\.svg$/,
+          loader: 'svg-inline-loader'
+        },
+        {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'babel-loader'
+          }
         }
-      }]
+      ]
     },
     plugins: [
       new VueLoaderPlugin()
