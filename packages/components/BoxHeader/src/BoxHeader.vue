@@ -49,7 +49,7 @@ import Icons from "uikit/dist/js/uikit-icons";
 UIkit.use(Icons);
 
 export default {
-  name: "BoxHeader",
+  name: "MaliBoxHeader",
   components: {
     AppList
   },
