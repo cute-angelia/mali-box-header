@@ -13,12 +13,17 @@ best mali
 ## Install
 
 ```
-
+npm i mali-box-header --save
 ```
 
 ## Usage
 
 ```
+// BoxHeader
+import BoxHeader from "mali-box-header"
+import VueLetterAvatar from "vue-letter-avatar"
+Vue.use(BoxHeader)
+Vue.use(VueLetterAvatar)
 
 ```
 
