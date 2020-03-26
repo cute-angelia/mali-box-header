@@ -67,8 +67,16 @@ export default {
     },
     logout() {
       //
-      removeToken();
-      window.location.href = this.loginUrl;
+      goPost(
+        "SsoLogout",
+        {},
+        data => {
+          removeToken();
+          window.location.href = this.loginUrl;
+        },
+        () => {}
+      );
+      //window.location.href = this.loginUrl;
     }
   },
   mounted() {
@@ -76,6 +84,8 @@ export default {
     const token = parseuriz.queryKey.sso_token;
     const appid = parseuriz.queryKey.appid;
     const appname = parseuriz.queryKey.appname;
+
+    console.log(appid, appname);
 
     // 跳转登陆成功
     if (token && token.length > 32) {
@@ -89,6 +99,14 @@ export default {
             let user = data;
             this.uid = user.id;
             this.username = user.username;
+
+            if (appid) {
+              localStorage["appid"] = appid;
+            }
+
+            if (appname) {
+              localStorage["appname"] = appname;
+            }
 
             setUser(JSON.stringify(data));
             window.location.href = location.protocol + "//" + location.host;
@@ -104,14 +122,6 @@ export default {
         this.uid = user.id;
         this.username = user.username;
       }
-    }
-
-    if (appid) {
-      localStorage["appid"] = appid;
-    }
-
-    if (appname) {
-      localStorage["appname"] = appname;
     }
   }
 };

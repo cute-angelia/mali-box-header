@@ -8,12 +8,14 @@ import {
   MessageBox,
   Message
 } from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css';
 const { Secure } = require("mali-secure")
 
 const secure = new Secure("cid", "123456", "192006250b4c09247ec02edce69f6a2d")
 
 const apiMap = {
   SsoAuthCheck: '/sso/auth/authcheck',
+  SsoLogout: '/sso/auth/logout',
   AppList: '/box/app/getList', // app list
 }
 
@@ -46,6 +48,7 @@ export function goPost(url, postdata, fsuccess, ferror) {
         }).then(() => {
           // reset token
           // location.reload()
+          window.location.href = localStorage["app_box_url"] + "/#/login"
         }).catch(() => {
           ferror(res)
         })
