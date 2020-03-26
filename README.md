@@ -25,6 +25,11 @@ import VueLetterAvatar from "vue-letter-avatar"
 Vue.use(BoxHeader)
 Vue.use(VueLetterAvatar)
 
+
+// use with need
+1. auth-redirect.vue insert `<box-header />` 
+2. layout/index.vue insert `<box-header />` 
+
 ```
 
 ## Maintainers
