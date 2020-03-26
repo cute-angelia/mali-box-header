@@ -32,6 +32,25 @@ Vue.use(VueLetterAvatar)
 
 ```
 
+服务端配置：
+
+```
+// 配置三个头部地址
+// SY_APPLICATION_ENV ： 环境
+// SY_APPLICATION_BOX_API_URL ： box api 地址
+// SY_APPLICATION_BOX_URL ： box 后台 地址
+
+header 会自动写入到 localstage
+
+app_env
+app_box_api_url
+app_box_url
+
+
+
+```
+
+
 ## Maintainers
 
 ## Contributing
