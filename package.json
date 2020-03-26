@@ -1,8 +1,8 @@
 {
   "name": "mali-box-header",
   "sideEffects": false,
-  "description": "good boy",
-  "version": "1.0.0",
+  "description": "mali best box common header",
+  "version": "1.0.1",
   "author": "Vanilla <rose20.99.c@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -11,7 +11,7 @@
   ],
   "main": "lib/mali-box-header",
   "files": [
-    "lib/mali-box-header.js",
+    "lib/*",
     "package.json",
     "README.md"
   ],
