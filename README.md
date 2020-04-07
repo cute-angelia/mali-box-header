@@ -27,8 +27,8 @@ Vue.use(VueLetterAvatar)
 
 
 // use with need
-1. auth-redirect.vue insert `<box-header />` 
-2. layout/index.vue insert `<box-header />` 
+1. auth-redirect.vue insert `<box-header />`
+2. layout/index.vue insert `<box-header />`
 
 ```
 
@@ -39,6 +39,7 @@ Vue.use(VueLetterAvatar)
 // SY_APPLICATION_ENV ： 环境
 // SY_APPLICATION_BOX_API_URL ： box api 地址
 // SY_APPLICATION_BOX_URL ： box 后台 地址
+// SY_APPLICATION_LOGOUT_URL ： 退出地址
 
 header 会自动写入到 localstage
 
@@ -48,8 +49,9 @@ app_box_url
 
 
 
-```
+permission.js 处理登陆逻辑
 
+```
 
 ## Maintainers
 

@@ -20,15 +20,16 @@
           <div v-if="isLogin">
             <span uk-icon="icon: user"></span>
             &nbsp;{{ username }} &nbsp;&nbsp;&nbsp;&nbsp;
-            <a
-              @click="logout"
-              href="javascript:void(0);"
-            >
+            <a @click="logout" href="javascript:void(0);">
               <span uk-icon="icon: sign-out"></span>退出
             </a>
           </div>
           <div v-else>
-            <a :href="loginUrl" class="uk-button uk-button-default tm-button-default ilogin">登录</a>
+            <a
+              :href="loginUrl"
+              class="uk-button uk-button-default tm-button-default ilogin"
+              >登录</a
+            >
           </div>
         </div>
       </nav>
@@ -57,7 +58,7 @@ export default {
       uid: null,
       env: "local",
       username: "",
-      loginUrl: localStorage["app_box_url"] + "/#/login"
+      loginUrl: localStorage["app_login_url"] + "/#/login"
     };
   },
   methods: {
@@ -84,7 +85,16 @@ export default {
     const appid = parseuriz.queryKey.appid;
     const appname = parseuriz.queryKey.appname;
 
-    console.log(appid, appname);
+    // 获取菜单
+    goPost(
+      "menuListByPage",
+      { appid: appid },
+      (data, msg) => {
+        localStorage["appMenuList"] = JSON.stringify(data.records);
+        // window.location.href = location.protocol + "//" + location.host;
+      },
+      () => {}
+    );
 
     // 跳转登陆成功
     if (token && token.length > 32) {
@@ -108,16 +118,6 @@ export default {
             }
 
             setUser(JSON.stringify(data));
-
-            goPost(
-              "menuListByPage",
-              { appid: appid },
-              (data, msg) => {
-                localStorage["appMenuList"] = JSON.stringify(data.records);
-                window.location.href = location.protocol + "//" + location.host;
-              },
-              () => {}
-            );
           } else {
             removeToken();
           }

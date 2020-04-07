@@ -26,7 +26,7 @@ var baseUrl = localStorage['app_box_api_url'] = getEnv('SY_APPLICATION_BOX_API_U
 
 localStorage['app_box_url'] = getEnv('SY_APPLICATION_BOX_URL') || 'http://box.test.com:8700'
 
-
+localStorage['app_login_url'] = getEnv('SY_APPLICATION_LOGIN_URL') || ''
 
 // switch (env) {
 //   case 'local':
