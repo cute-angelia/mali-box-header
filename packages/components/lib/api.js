@@ -17,6 +17,7 @@ const apiMap = {
   SsoAuthCheck: '/sso/auth/authcheck',
   SsoLogout: '/sso/auth/logout',
   AppList: '/box/app/getList', // app list
+  menuListByPage: '/box/menu/lists', // 菜单列表
 }
 
 export function goPost(url, postdata, fsuccess, ferror) {
