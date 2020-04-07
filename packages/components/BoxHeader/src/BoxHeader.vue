@@ -82,19 +82,22 @@ export default {
   mounted() {
     const parseuriz = parseuri(window.location.href);
     const token = parseuriz.queryKey.sso_token;
-    const appid = parseuriz.queryKey.appid;
+    const appid = parseuriz.queryKey.appid || localStorage["appid"];
     const appname = parseuriz.queryKey.appname;
 
-    // 获取菜单
-    goPost(
-      "menuListByPage",
-      { appid: appid },
-      (data, msg) => {
-        localStorage["appMenuList"] = JSON.stringify(data.records);
-        // window.location.href = location.protocol + "//" + location.host;
-      },
-      () => {}
-    );
+    if (appid > 0) {
+      // 获取菜单
+      goPost(
+        "menuListByPage",
+        { app_id: appid },
+        (data, msg) => {
+          console.log(data.records);
+          localStorage["appMenuList"] = JSON.stringify(data.records);
+          // window.location.href = location.protocol + "//" + location.host;
+        },
+        () => {}
+      );
+    }
 
     // 跳转登陆成功
     if (token && token.length > 32) {
@@ -118,6 +121,7 @@ export default {
             }
 
             setUser(JSON.stringify(data));
+            window.location.href = location.protocol + "//" + location.host;
           } else {
             removeToken();
           }

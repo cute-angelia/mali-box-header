@@ -1,13 +1,21 @@
 {
   "name": "mali-box-header",
   "description": "mali best box common header",
-  "version": "1.1.1",
+  "version": "1.1.5",
   "author": "Vanilla <rose20.99.c@gmail.com>",
   "license": "MIT",
   "keywords": [
     "vue",
     "mali-box-header"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cute-angelia/mali-box-header.git"
+  },
+  "homepage": "https://github.com/cute-angelia/mali-box-header.git",
+  "bugs": {
+    "url": "https://github.com/cute-angelia/mali-box-header.git/issues"
+  },
   "main": "lib/mali-box-header.js",
   "files": [
     "lib/*",
