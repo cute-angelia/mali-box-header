@@ -24,8 +24,7 @@
   ],
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --env --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --env --progress --hide-modules",
-    "publish": "cross-env NODE_ENV=production webpack --env.lib --progress --hide-modules && npm publish"
+    "build": "cross-env NODE_ENV=production webpack --env --progress --hide-modules && npm publish"
   },
   "dependencies": {
     "axios": "^0.19.2",
