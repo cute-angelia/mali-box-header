@@ -29,6 +29,7 @@ Vue.use(VueLetterAvatar)
 // use with need
 1. auth-redirect.vue insert `<box-header />`
 2. layout/index.vue insert `<box-header />`
+3. permission.js 处理登陆逻辑
 
 ```
 
@@ -49,9 +50,6 @@ app_env
 app_box_api_url
 app_box_url
 
-
-
-permission.js 处理登陆逻辑
 
 ```
 

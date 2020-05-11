@@ -11,7 +11,7 @@ import {
 import 'element-ui/lib/theme-chalk/index.css';
 
 const { Secure } = require("mali-secure")
-const secure = new Secure("cid", "123456", "192006250b4c09247ec02edce69f6a2d")
+const secure = new Secure("cid", "1", "192006250b4c09247ec02edce69f6a2d")
 
 const apiMap = {
   SsoAuthCheck: '/sso/auth/authcheck',
@@ -33,7 +33,7 @@ export function goPost(url, postdata, fsuccess, ferror) {
 
   request({
     method: 'POST',
-    url: secure.getSign(uri),
+    url: secure.getSignWithCidOpenId(uri),
     data: postdata
   })
     .then(res => {
