@@ -22,7 +22,7 @@ if (env.length <= 0) {
   env = localStorage['app_env'] = getEnv('SY_APPLICATION_ENV') || 'local'
 }
 
-var baseUrl = localStorage['app_box_api_url'] = getEnv('SY_APPLICATION_BOX_API_URL') || 'http://127.0.0.1:8004'
+var baseUrl = localStorage['app_box_api_url'] || getEnv('SY_APPLICATION_BOX_API_URL') || 'http://127.0.0.1:8004'
 
 localStorage['app_box_url'] = localStorage['app_box_url'] || getEnv('SY_APPLICATION_BOX_URL') || 'http://box.test.com:8700'
 localStorage['app_login_url'] = localStorage['app_login_url'] || getEnv('SY_APPLICATION_LOGIN_URL') || ''
