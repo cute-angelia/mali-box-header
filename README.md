@@ -55,7 +55,7 @@ app_box_url
 
 ## Publish
 
-npm run build
+npm run publish
 
 ## Contributing
 

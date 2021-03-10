@@ -1,7 +1,7 @@
 {
   "name": "mali-box-header",
   "description": "mali best box common header",
-  "version": "1.1.12",
+  "version": "1.1.13",
   "author": "Vanilla <rose20.99.c@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -24,7 +24,8 @@
   ],
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --env --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --env --progress --hide-modules && npm publish"
+    "build": "cross-env NODE_ENV=production webpack --env --progress --hide-modules && npm publish",
+    "publish": "cross-env NODE_ENV=production webpack --env.lib --progress --hide-modules && npm publish"
   },
   "dependencies": {
     "axios": "^0.21.1",
