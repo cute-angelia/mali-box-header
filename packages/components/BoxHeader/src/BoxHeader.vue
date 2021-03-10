@@ -7,7 +7,7 @@
     <div class="uk-container uk-container-expand">
       <nav class="uk-navbar">
         <div class="uk-navbar-left">
-          <span uk-icon="icon: grid"></span>&nbsp;
+          <span uk-icon="icon: grid"></span>
           <div class="margin-right-20">
             <app-list></app-list>
           </div>
@@ -19,13 +19,11 @@
         <div class="uk-navbar-item uk-visible@m">
           <div v-if="isLogin">
             <span uk-icon="icon: user"></span>
-            &nbsp;{{ username }} &nbsp;&nbsp;&nbsp;&nbsp;
+            {{ username }}
             <a
               @click="logout"
               href="javascript:void(0);"
-            >
-              <span uk-icon="icon: sign-out"></span>退出
-            </a>
+            ><span uk-icon="icon: sign-out"></span>退出</a>
           </div>
           <div v-else>
             <a :href="loginUrl" class="uk-button uk-button-default tm-button-default ilogin">登录</a>

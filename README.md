@@ -53,7 +53,9 @@ app_box_url
 
 ```
 
-## Maintainers
+## Publish
+
+npm run build
 
 ## Contributing
 

@@ -70,7 +70,7 @@ export default {
             "&appid=" +
             app["id"] +
             "&sso_token=" +
-            getToken();
+            getToken()+"#/auth-redirect";
         }
         this.dataLists = data;
       }
